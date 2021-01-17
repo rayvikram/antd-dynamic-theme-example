@@ -1,25 +1,18 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Button } from 'antd';
 import './App.css';
+import DynamicAntdTheme from 'dynamic-antd-theme';
+import Table from "./Table"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <Button type="primary">Button</Button>
+    <div className='theme-container'>
+  <span>Change antd theme(primary color): </span>
+  <Table />
+  <DynamicAntdTheme />
+</div>
+  </div>
+);
 
 export default App;
